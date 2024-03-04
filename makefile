@@ -13,11 +13,10 @@ FORMAT = clang-format
 FFLAGS = --style=google -i
 
 SRC = $(shell echo $S/*.cc)
-# HEADER = $(shell echo $I/*.h)
+HEADER = $(shell echo $I/*.h)
 TARGET = $B/app
 
-# $(TARGET): $(SRC) $(HEADER)
-$(TARGET): $(SRC)
+$(TARGET): $(SRC) $(HEADER)
 	@if [ ! -d $B ]; then mkdir $B; fi
 	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
 
@@ -29,3 +28,4 @@ clean:
 
 format:
 	$(FORMAT) $(FFLAGS) $S/*
+	$(FORMAT) $(FFLAGS) $I/*
