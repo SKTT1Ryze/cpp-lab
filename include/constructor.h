@@ -14,11 +14,42 @@ class IConstructor {
 
   // initialization in the initializer list
   //
+  // maybe faster then above
   //
   // INoob() : a(1), b(2) {}
 
   // initialization with parameter list
   IConstructor(int x, int y);
+
+  // overload of the constructor
+  IConstructor(int x);
+
+  /* Copy Constructor:
+   * https://en.cppreference.com/w/cpp/language/copy_constructor */
+
+  // copy constructor version I
+  IConstructor(IConstructor& other);
+
+  // copy constructor version II
+  // IConstructor(IConstructor& other, int y = 1);
+
+  // copy constructor version III
+  //
+  // error: x and y have no default argument
+  // IConstructor(IConstructor& other, int x, int y);
+
+  // note: If no user-defined copy constructors are provided for a class type,
+  // the compiler will always declare a copy constructor as a non-explicit
+  // inline public member of its class. In this case, we should be careful if
+  // the object need to be deep copy.
+
+  /* Move Constructor */
+
+  // move constructor version I
+  IConstructor(IConstructor&& other);
+
+  // move constructor version II
+  // IConstructor(IConstructor&& other, int x = 1);
 };
 
 void executeConstructor();
