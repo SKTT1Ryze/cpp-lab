@@ -54,9 +54,6 @@ class IConstructor {
   // note: If no user-defined move constructors are provided for a class type,
   // then the compiler **may** declare a move constructor as a non-explicit
   // inline public member of its class with the signature T::T(T&&).
-
-  // TODO: difference between common constructor, copy constructor and move
-  // constructor.
 };
 
 void executeConstructor();
