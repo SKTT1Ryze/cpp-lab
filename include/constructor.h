@@ -31,11 +31,11 @@ class IConstructor {
   IConstructor(IConstructor& other);
 
   // copy constructor version II
+  //
   // IConstructor(IConstructor& other, int y = 1);
 
   // copy constructor version III
   //
-  // error: x and y have no default argument
   // IConstructor(IConstructor& other, int x, int y);
 
   // note: If no user-defined copy constructors are provided for a class type,
@@ -50,6 +50,13 @@ class IConstructor {
 
   // move constructor version II
   // IConstructor(IConstructor&& other, int x = 1);
+
+  // note: If no user-defined move constructors are provided for a class type,
+  // then the compiler **may** declare a move constructor as a non-explicit
+  // inline public member of its class with the signature T::T(T&&).
+
+  // TODO: difference between common constructor, copy constructor and move
+  // constructor.
 };
 
 void executeConstructor();
