@@ -47,3 +47,13 @@ void executeValueCategory() {
 
   static_assert(is_lvalue<decltype((r))>::value, "Expression `r` is lvalue");
 }
+
+int& a_ref() {
+  static int a{3};
+  return a;
+}
+
+void foo() {
+  a_ref() = 5;  // `a_ref()` is lvalue, function call whose return type is
+                // lvalue reference
+}
