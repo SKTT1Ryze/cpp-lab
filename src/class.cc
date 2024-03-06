@@ -1,5 +1,6 @@
 #include "../include/class.h"
 
+#include <cassert>
 #include <iostream>
 
 using namespace std;
@@ -11,6 +12,5 @@ int INoob::getB() { return this->b; }
 void executeClass() {
   auto noob = new INoob();
   noob->a = 1;
-
-  cout << "a = " << noob->getA() << endl;
+  assert(noob->getA() == 1);
 }

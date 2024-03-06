@@ -1,3 +1,4 @@
+#include <cassert>
 #include <iostream>
 
 #include "../include/constructor.h"
@@ -29,19 +30,24 @@ void executeConstructor() {
   /* direct initialization:
    * https://en.cppreference.com/w/cpp/language/direct_initialization */
   auto cons0 = new IConstructor();
-  cout << "a = " << cons0->a << ", b = " << cons0->b << endl;
+  assert(cons0->a == 1);
+  assert(cons0->b == 2);
 
   auto cons1 = new IConstructor(3, 4);
-  cout << "a = " << cons1->a << ", b = " << cons1->b << endl;
+  assert(cons1->a == 3);
+  assert(cons1->b == 4);
 
   auto cons2 = new IConstructor(5);
-  cout << "a = " << cons2->a << ", b = " << cons2->b << endl;
+  assert(cons2->a == 5);
+  assert(cons2->b == 2);
 
   /* copy initialization:
    * https://en.cppreference.com/w/cpp/language/copy_initialization */
   auto cons3 = *cons2;
-  cout << "a = " << cons3.a << ", b = " << cons3.b << endl;
+  assert(cons3.a == 5);
+  assert(cons3.b == 2);
 
   auto cons4 = std::move(cons3);
-  cout << "a = " << cons4.a << ", b = " << cons4.b << endl;
+  assert(cons4.a == 5);
+  assert(cons4.b == 2);
 }
