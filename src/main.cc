@@ -2,6 +2,7 @@
 
 #include "../include/class.h"
 #include "../include/constructor.h"
+#include "../include/inheritance.h"
 #include "../include/move.h"
 #include "../include/valueCategory.h"
 
@@ -12,4 +13,5 @@ int main() {
   executeConstructor();
   executeValueCategory();
   executeMove();
+  executeInheritance();
 }
