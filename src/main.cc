@@ -6,6 +6,7 @@
 #include "../include/inheritance.h"
 #include "../include/move.h"
 #include "../include/valueCategory.h"
+#include "../include/virtualFunction.h"
 
 using namespace std;
 
@@ -16,4 +17,5 @@ int main() {
   executeMove();
   executeInheritance();
   executeAbstractClass();
+  executeVirtualFuncton();
 }
