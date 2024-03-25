@@ -1,4 +1,4 @@
-#include "../include/inheritance.h"
+#include "../include/inheritance.hpp"
 
 #include <cassert>
 

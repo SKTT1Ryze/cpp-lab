@@ -1,4 +1,4 @@
-#include "../include/virtualFunction.h"
+#include "../include/virtualFunction.hpp"
 
 #include <cassert>
 

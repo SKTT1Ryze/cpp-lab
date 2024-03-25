@@ -1,4 +1,4 @@
-#include "../include/class.h"
+#include "../include/class.hpp"
 
 #include <cassert>
 #include <iostream>

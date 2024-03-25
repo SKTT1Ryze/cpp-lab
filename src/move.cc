@@ -1,4 +1,4 @@
-#include "../include/move.h"
+#include "../include/move.hpp"
 
 #include <algorithm>
 #include <cassert>
