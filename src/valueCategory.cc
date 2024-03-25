@@ -1,4 +1,4 @@
-#include "../include/valueCategory.h"
+#include "../include/valueCategory.hpp"
 
 #include <type_traits>
 #include <utility>

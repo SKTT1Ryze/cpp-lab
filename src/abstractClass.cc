@@ -1,4 +1,4 @@
-#include "../include/abstractClass.h"
+#include "../include/abstractClass.hpp"
 
 using namespace abstract;
 

@@ -5,7 +5,7 @@ S = src
 I = include
 
 CC = clang++
-CFLAGS = -std=c++14
+CFLAGS = -std=c++20
 CFLAGS += -Wall -O2 -D_GNU_SOURCE
 CFLAGS += -I$I
 
@@ -13,7 +13,7 @@ FORMAT = clang-format
 FFLAGS = --style=google -i
 
 SRC = $(shell echo $S/*.cc)
-HEADER = $(shell echo $I/*.h)
+HEADER = $(shell echo $I/*.hpp)
 TARGET = $B/app
 
 $(TARGET): $(SRC) $(HEADER)
